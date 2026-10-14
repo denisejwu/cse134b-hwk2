@@ -11,6 +11,17 @@
     header, nav, main, section, article, footer {
       border: 1px solid black;
     }
+
+    /* Custom element #1: project-type badge (CSS for this element does not count toward the CSS limit) */
+    project-type {
+      display: inline-block;
+      padding: 2px 10px;
+      border: 1px solid black;
+      border-radius: 12px;
+      background-color: #eeeeee;
+      font-size: 0.85em;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -32,6 +43,7 @@
       <a href="film.html">Film &amp; Photography</a>
       <a href="about.html">About</a>
       <a href="index.html#contact">Contact</a>
+      <a href="experiments.html">Experiments</a>
     </nav>
   </header>
 
@@ -61,7 +73,7 @@
           <img id="project1-thumb" src="images/project1-thumb.jpg" alt="Screenshot of Project 1 home screen" width="250">
         </a>
         <h3>Project 1 Title</h3>
-        <p>Type: Tech</p>
+        <p>Type: <project-type>Tech</project-type></p>
         <p>One-line summary of the project.</p>
         <form action="project1.html" method="get">
           <button type="submit">More information</button>

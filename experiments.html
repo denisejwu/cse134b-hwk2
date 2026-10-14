@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Experiments | DJZ Studios</title>
+        <link rel="icon" href="images/favicon.png">
+        <script>
+            // Custom element #2: <hello-world> prints a message to the console.
+            // It never changes the page (no innerHTML, textContent, appendChild, etc.).
+            class HelloWorld extends HTMLElement {
+                // The browser calls this automatically when <hello-world> is added to the page.
+                connectedCallback() {
+                    console.log("Hello World!");
+                }
+            }
+
+            // Tell the browser that the <hello-world> tag uses the HelloWorld class above.
+            customElements.define("hello-world", HelloWorld);
+        </script>
+    </head>
+    
+<body>
+
+    <header>
+        <a href="index.html">
+            <svg width="80" height="80" viewBox="0 0 80 80" role="img" aria-labelledby="logo-title">
+                <title id="logo-title">DJZ Studios home</title>
+                <circle cx="40" cy="40" r="36" fill="black" stroke="gray" stroke-width="4"/>
+                <text x="40" y="48" text-anchor="middle" font-family="sans-serif" font-size="22" fill="white">DJZ</text>
+            </svg>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="film.html">Film &amp; Photography</a>
+            <a href="about.html">About</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="experiments.html">Experiments</a>
+        </nav>
+        <h1>Experiments</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>The template Element</h2>
+
+            <p>Click the button below to display the hidden content from the template element.</p>
+
+            <button type="button">Show hidden content</button>
+
+            <template>
+                <h2>Flower</h2>
+                <img src="img_white_flower.jpg" alt="White flower" width="214" height="204">
+            </template>
+        </section>
+
+        <section>
+            <h2>Audio Tag</h2>
+
+            <audio controls>
+                <source src="horse.ogg" type="audio/ogg">
+                <source src="horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section>
+            <h2>Video Tag</h2>
+
+            <video width="400" height="300" controls>
+                <source src="movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the video element.
+            </video>
+        </section>
+
+        <section>
+            <h2>Canvas Tag</h2>
+
+            <canvas id="myCanvas" width="400" height="300">A diagonal line drawn on a canvas.</canvas>
+            <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.moveTo(0, 0);
+                ctx.lineTo(200, 100);
+                ctx.stroke();
+            </script>
+        </section>
+
+        <section>
+            <h2>Custom Element: hello-world</h2>
+
+            <p>This element prints "Hello World!" to the browser console. Open the console (F12, then the Console tab) to see it.</p>
+
+            <hello-world></hello-world>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DJZ Studios</p>
+    </footer>
+
+</body>
+</html>
