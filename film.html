@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film &amp; Photography | DJZ Studios</title>
+    <link rel="icon" href="images/favicon.png">
 </head>
 <body>
 
@@ -18,9 +19,12 @@
         <h1>Film & Photography</h1>
     </header>
 
-    <button type="button">Latest</button>
-    <button type="button">Film/Video</button>
-    <button type="button">Photography</button>
+    <div>
+        <button type="button">Latest</button>
+        <button type="button">Film/Video</button>
+        <button type="button">Photography</button>
+    </div>
+    
 
     <main>
         <section>
@@ -28,22 +32,22 @@
 
             <section>
                 <h3>Project 1 Title</h3>
-                <a href="http://youtube.com" target="_blank">
-                    Click here to view the video
-                </a>
-                <p>Type: Film/Video <span> Date:</span></p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="Project 1 Title video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <p><em>Caption</em> for the film/video project.</p>
+                <p>Type: Film/Video <span> Date:</span></p>
                 <p>One-line summary of the project.</p>
                 <button type="button">More information</button>
-                <br>
             </section>
 
              <section>
-                <img src="images/project2-thumb.jpg" alt="Screenshot of Project 2 Photo" width="250">
+                <picture>
+                    <source srcset="images/project2-thumb.webp" type="image/webp">
+                    <img src="images/project2-thumb.jpg" alt="Screenshot of Project 2 Photo" width="250">
+                </picture>
                 <h3>Project 2 Title</h3>
                 <p>Type: Photography Black & White <span> Date:</span></p>
                 <p><b><em>Caption</em> for the photography project.</b></p>
-                <p>One-line summary of the project.</p>
+                <p>A study in <i lang="it">chiaroscuro</i>, the strong contrast between light and shadow.</p>
                 <button type="button">More information</button>
             </section>
         </section>

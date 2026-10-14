@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | DJZ Studios</title>
+  <link rel="icon" href="images/favicon.png">
 </head>
 <body>
   <header>
@@ -17,6 +18,13 @@
   </header>
 
   <main>
+    <dialog open>
+      <p>Thanks for visiting! This portfolio is a work in progress, and new projects are added regularly.</p>
+      <form method="dialog">
+        <button type="submit">Close</button>
+      </form>
+    </dialog>
+
     <section>
       <img src="images/headshot.jpg" alt="Denise Wu Mendez smiling outdoors" width="300">
       <h1>Denise Wu Mendez</h1>
@@ -48,9 +56,24 @@
 
   <footer id="contact">
     <h3>Contact</h3>
-    <p>Email: dwumendez@ucsd.edu</p>
+    <p>Denise Wu Mendez<br>
+      Email: dwumendez@ucsd.edu</p>
     <a href="https://www.linkedin.com/in/denisewumendez/" target="_blank">LinkedIn</a>
     <a href="https://github.com/denisejwu" target="_blank">GitHub</a>
+    <p><strong>Hire me for your next project!</strong></p>
+
+    <form action="/about.html">
+      <fieldset>
+        <legend>Send me a message</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <input type="submit" value="Send">
+      </fieldset>
+    </form>
     <p>&copy; 2026 Denise Wu Mendez</p>
   </footer>
 </body>
