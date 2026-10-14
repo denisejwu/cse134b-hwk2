@@ -5,9 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | DJZ Studios</title>
   <link rel="icon" href="images/favicon.png">
+  <!-- Analytics placeholder: replace GTM-XXXXXXX with a real Google Tag Manager ID -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-XXXXXXX"></script>
+  <style>
+    header, nav, main, section, article, footer {
+      border: 1px solid black;
+    }
+  </style>
 </head>
 <body>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" width="0" height="0" hidden></iframe>
+  </noscript>
+
   <header>
+    <a href="index.html">
+      <svg width="80" height="80" viewBox="0 0 80 80" role="img" aria-labelledby="logo-title">
+        <title id="logo-title">DJZ Studios home</title>
+        <circle cx="40" cy="40" r="36" fill="black" stroke="gray" stroke-width="4"/>
+        <text x="40" y="48" text-anchor="middle" font-family="sans-serif" font-size="22" fill="white">DJZ</text>
+      </svg>
+    </a>
     <nav>
       <a href="index.html">Home</a>
       <a href="portfolio.html">Portfolio</a>
@@ -25,7 +43,7 @@
       </form>
     </dialog>
 
-    <section>
+    <section id="intro">
       <img src="images/headshot.jpg" alt="Denise Wu Mendez smiling outdoors" width="300">
       <h1>Denise Wu Mendez</h1>
       <p>UX/Product Designer &amp; Front-End Developer</p>
@@ -40,7 +58,7 @@
 
       <article>
         <a href="project1.html">
-          <img src="images/project1-thumb.jpg" alt="Screenshot of Project 1 home screen" width="250">
+          <img id="project1-thumb" src="images/project1-thumb.jpg" alt="Screenshot of Project 1 home screen" width="250">
         </a>
         <h3>Project 1 Title</h3>
         <p>Type: Tech</p>
